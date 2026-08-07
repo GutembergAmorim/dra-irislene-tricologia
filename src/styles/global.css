@@ -1,0 +1,53 @@
+/* ========================================
+   DESIGN SYSTEM — Dra. Irislene Brasil
+   ======================================== */
+/* Google Fonts — importar Poppins e Open Sans */
+/* Dica: vá em fonts.google.com, selecione as fontes e pesos, copie o @import */
+/* Pesos sugeridos: Poppins (300, 400, 500, 600, 700) / Open Sans (300, 400, 500, 600) */
+
+
+:root {
+  /* ── CORES ── */
+  --color-bg-primary: #ffffff;        /* fundo principal (branco ou off-white) */
+  --color-bg-secondary: #F8F6F3;      /* fundo alternado de seções (cinza claro) */
+  --color-text-primary: #2D2D2D;      /* texto principal (cinza escuro, NÃO preto puro) */
+  --color-text-secondary: #6B7280;    /* texto secundário (cinza médio) */
+  --color-accent: #C9A96E;            /* destaque dourado sutil */
+  --color-accent-hover: #B08D4F;      /* dourado um tom mais escuro pro hover */
+  --color-white: #FFFFFF;
+  --color-border: #E5E7EB;            /* cor de bordas sutis */
+
+  /* ── TIPOGRAFIA ── */
+  --font-heading: "Poppins", sans-serif;    /* fonte dos títulos */
+  --font-body: "Open Sans", sans-serif;       /* fonte do corpo */
+
+  /* ── ESPAÇAMENTOS ── */
+  /* Use múltiplos de 8px (sistema de 8-point grid) */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  --spacing-section: 80px;       /* espaço entre seções da página */
+
+  /* ── OUTROS ── */
+  --border-radius: 8px;
+  --transition-default: all 0.3s ease;
+  --max-width: 1200px;           /* largura máxima do conteúdo */
+}
+
+/* ── ESTILOS GLOBAIS ── */
+body {
+  /* aplique: font-family do body, cor do texto, cor do fundo, line-height 1.6 */
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* aplique: font-family dos headings, line-height 1.2 */
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}

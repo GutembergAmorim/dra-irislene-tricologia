@@ -1,0 +1,33 @@
+/* Reset básico — zera estilos padrão do navegador */
+/* 1. Todos os elementos: zere margin, padding, e mude o box-sizing pra border-box */
+/* Dica: use o seletor universal (*) */
+/* box-sizing: border-box faz com que padding e border fiquem DENTRO da largura, não fora */
+/* 2. body: tire a margin padrão, defina altura mínima 100vh */
+/* 3. Imagens: display block e max-width 100% */
+/* Dica: imagens são inline por padrão, o que causa um espaço fantasma embaixo */
+/* 4. Links: tire o text-decoration padrão, herde a cor do pai */
+/* 5. Listas (ul, ol): tire o list-style padrão */
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   min-height: 100vh;
+}
+
+img{
+   display: block;
+   max-width: 100%;
+}
+
+a{
+   text-decoration: none;
+   color: inherit;
+}
+
+ul,ol{
+   list-style: none;
+}
