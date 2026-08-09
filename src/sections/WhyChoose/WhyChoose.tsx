@@ -2,7 +2,7 @@ import './WhyChoose.css';
 
 export default function WhyChoose() {
    return (
-      <section className='why-choose'>
+      <section className='why-choose' >
          <div className='why-choose-container'>
             <div className="why-choose-header">
                <h2>Por que escolher a Dra. Irislene?</h2>

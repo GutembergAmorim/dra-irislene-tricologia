@@ -3,7 +3,7 @@ import "./Testimonials.css";
 
 export default function Testimonials() {
    return (
-      <section className="testimonials">
+      <section className="testimonials" id="depoimentos">
          <div className="testimonials-container">
             <div className="testimonials-header">
                <h2 className="testimonials-title">Resultados Reais</h2>

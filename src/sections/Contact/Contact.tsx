@@ -47,7 +47,7 @@ export default function Contact() {
    }
 
    return (
-      <section className='contact'>
+      <section className='contact' id='contato'>
          <div className='contact-container'>
             <h2>Entre em contato</h2>
             <p>Agende sua consulta e transforme sua vida.</p>

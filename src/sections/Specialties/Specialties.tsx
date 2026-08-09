@@ -3,7 +3,7 @@ import './Specialties.css';
 
 export default function Specialties() {
    return (
-      <section className="specialties" id="specialties">
+      <section className="specialties" id="especialidades">
          <div className="specialties-container">
             <div className="specialties-header">
                <h2>Tratamento Especializados</h2>

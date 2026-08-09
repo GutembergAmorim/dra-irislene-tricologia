@@ -17,7 +17,9 @@ export default function Header() {
                      <li><a href="#contato">Contato</a></li>
                   </ul>
 
-                  <Button texto="Agendar Consulta" />
+                  <a href="#contato">
+                     <Button texto="Agendar Consulta" />
+                  </a>
                 </nav>
             </div>
         </header>

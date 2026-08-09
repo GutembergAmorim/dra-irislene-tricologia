@@ -62,3 +62,26 @@
       width: 100%;
    }
 }
+
+/* 1. Criamos a "receita" da animação chamada fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Começa invisível e 30px mais para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina visível na posição original */
+  }
+}
+/* 2. Aplicamos a "receita" no conteúdo da Hero */
+.hero-content {
+  /* Nome da animação | Duração | Aceleração | Direção */
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+/* 3. Bônus: Fazemos a Imagem aparecer um pouquinho DEPOIS do texto (delay) */
+.hero-image {
+  opacity: 0; /* Esconde primeiro */
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.3s; /* Espera 0.3 segundos para começar */
+}
