@@ -46,3 +46,15 @@
    margin-bottom: var(--spacing-lg);
    max-width: 90%;
 }
+
+/* --- Responsividade (Mobile) --- */
+@media (max-width: 768px) {
+   .about-container {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .about-image {
+      width: 100%;
+   }
+}

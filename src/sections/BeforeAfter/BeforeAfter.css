@@ -47,3 +47,8 @@
    transform: scale(1.02);
 }
 
+@media (max-width: 768px) {
+   .before-after-grid {
+      grid-template-columns: repeat(2, 1fr);
+   } 
+}

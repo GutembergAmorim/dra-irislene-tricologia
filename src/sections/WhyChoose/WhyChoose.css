@@ -45,3 +45,9 @@
    color: var(--color-text-secondary);
    line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+   .why-choose-grid {
+      grid-template-columns: repeat(2, 1fr);
+   } 
+}

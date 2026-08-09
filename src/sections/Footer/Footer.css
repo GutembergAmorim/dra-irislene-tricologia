@@ -42,3 +42,15 @@
 .footer-social a:hover {
    color: var(--color-accent); /* Ícone fica dourado ao passar o mouse */
 }
+
+/* --- Responsividade (Mobile) --- */
+@media (max-width: 768px) {
+   .footer-container {
+      flex-direction: column;
+      gap: var(--spacing-lg)
+   }
+
+   .footer-social {
+      justify-content: center;
+   }
+}
