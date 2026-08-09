@@ -1,0 +1,44 @@
+/* src/sections/Footer/Footer.css */
+.footer {
+   background-color: var(--color-text-primary);
+   padding: var(--spacing-section) 0;
+}
+.footer-container {
+   max-width: var(--max-width);
+   margin: 0 auto;
+   padding: 0 var(--spacing-md);
+   display: flex;
+   justify-content: space-between; /* Distribui melhor que o space-around */
+   align-items: center;
+   gap: var(--spacing-xl);
+}
+/* Renomeado para evitar colisão com o Hero */
+.footer-logo-placeholder {
+   background-color: var(--color-text-secondary);
+   padding: 12px 24px;
+   border-radius: var(--border-radius);
+   color: var(--color-bg-primary);
+   font-weight: 600;
+}
+.footer-info {
+   flex: 1;
+   text-align: center; /* Centraliza o texto do meio */
+}
+.footer-info p {
+   color: var(--color-bg-primary);
+   margin-bottom: 4px;
+   font-size: 0.95rem;
+}
+.footer-social {
+   display: flex;
+   gap: 20px; /* Espaço entre o Instagram e o WhatsApp */
+   justify-content: flex-end; /* Joga os ícones pro canto direito */
+}
+/* A cor dos ícones é controlada pela tag <a> que os envolve */
+.footer-social a {
+   color: var(--color-bg-primary);
+   transition: var(--transition-default);
+}
+.footer-social a:hover {
+   color: var(--color-accent); /* Ícone fica dourado ao passar o mouse */
+}

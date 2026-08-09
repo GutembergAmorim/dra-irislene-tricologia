@@ -1,0 +1,61 @@
+.contact {
+   background-color: var(--color-bg-secondary);
+   padding: var(--spacing-section);
+}
+
+.contact-container {
+   max-width: var(--max-width);
+   margin: 0 auto;
+   padding: var(--spacing-md);
+}
+
+.contact-container h2 {
+   font-size: 2rem;
+   color: var(--color-text-primary);
+   margin-bottom: var(--spacing-sm);
+   text-align: center;
+}
+
+.contact-container p {
+   color: var(--color-text-secondary);
+   margin-bottom: var(--spacing-xl);
+   text-align: center;
+}
+
+.contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-md);
+}
+
+.contact-form label {
+   color: var(--color-text-primary);
+   font-weight: 500;
+   margin-bottom: -8px; /* Puxa um pouquinho para perto do input */
+   font-size: 0.95rem;
+}
+/* Estilizando os campos de texto */
+.contact-form input,
+.contact-form textarea {
+   width: 100%;
+   padding: 12px 16px;
+   border: 1px solid var(--color-border);
+   border-radius: var(--border-radius);
+   background-color: var(--color-bg-primary); /* Fundo branco no input */
+   font-family: var(--font-body); /* Força a fonte correta */
+   font-size: 1rem;
+   color: var(--color-text-primary);
+   transition: var(--transition-default);
+}
+/* Deixa a textarea maiorzinha */
+.contact-form textarea {
+   min-height: 120px;
+   resize: vertical; /* Permite redimensionar só pra baixo */
+}
+/* O efeito quando o usuário clica para digitar (Focus) */
+.contact-form input:focus,
+.contact-form textarea:focus {
+   outline: none;
+   border-color: var(--color-accent); /* Borda fica dourada */
+   box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2); /* Brilho dourado ao redor */
+}

@@ -1,0 +1,23 @@
+.testimonial {
+   background-color: var(--color-bg-primary);
+   border-radius: var(--border-radius);
+   padding: var(--spacing-md);
+   border: 1px solid var(--color-border);
+   transition: var(--transition-default);
+}
+
+.testimonial:hover {
+   border-color: var(--color-accent);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-nome {
+   color: var(--color-text-primary);
+   margin-bottom: var(--spacing-xs);
+   font-size: 1.25rem;
+}
+
+.testimonial-texto {
+   color: var(--color-text-secondary);
+   font-size: 0.9rem;
+}
