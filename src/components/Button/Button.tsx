@@ -6,7 +6,7 @@ interface ButtonProps {
 
 export default function Button({ texto }: ButtonProps) {
    return (
-      <button className='btn-primary'>
+      <button type='submit' className='btn-primary'>
          {texto}
       </button>
    )
