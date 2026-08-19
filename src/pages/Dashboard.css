@@ -1,0 +1,57 @@
+/* src/pages/Dashboard.css */
+.dashboard-page {
+  min-height: 100vh;
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+.dashboard-header {
+  max-width: var(--max-width);
+  margin: 0 auto var(--spacing-xl);
+}
+.dashboard-header h1 {
+  color: var(--color-text-primary);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+}
+.dashboard-header p {
+  color: var(--color-text-secondary);
+}
+.dashboard-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+/* O "Cartão" branco onde a tabela fica */
+.table-container {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Se a tela for pequena, a tabela rola pro lado */
+}
+.leads-table {
+  width: 100%;
+  border-collapse: collapse; /* Tira os espaços feios entre as células */
+  text-align: left;
+}
+.leads-table th, 
+.leads-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+.leads-table th {
+  background-color: #F3F4F6; /* Cinza bem clarinho pro cabeçalho */
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase; /* Letras maiúsculas */
+  letter-spacing: 0.05em;
+}
+.leads-table td {
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+/* Um hover legal na linha pra ajudar a leitura */
+.leads-table tbody tr:hover {
+  background-color: #F9FAFB;
+}
+.fw-bold { font-weight: 600; }
+.text-center { text-align: center; color: var(--color-text-secondary); }
