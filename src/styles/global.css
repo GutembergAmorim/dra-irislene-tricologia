@@ -6,6 +6,21 @@
 /* Pesos sugeridos: Poppins (300, 400, 500, 600, 700) / Open Sans (300, 400, 500, 600) */
 
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  display: block;
+}
+
 :root {
   /* ── CORES ── */
   --color-bg-primary: #ffffff;        /* fundo principal (branco ou off-white) */
@@ -60,3 +75,11 @@ html {
 /* section {
   scroll-margin-top: 80px; 
 } */
+@media (max-width: 768px) {
+  :root {
+    --spacing-section: 48px;
+  }
+  h2, .section-headline {
+    font-size: 2rem !important;
+  }
+}
