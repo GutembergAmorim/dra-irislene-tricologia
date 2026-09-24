@@ -43,6 +43,42 @@ export default function Dashboard() {
     const data = new Date(dataString);
     return data.toLocaleDateString('pt-BR') + ' às ' + data.toLocaleTimeString('pt-BR', { hour: '2-digit', minute:'2-digit' });
   }
+
+   // Função para transformar Lead em Paciente
+   async function converterLeadEmPaciente(lead: Lead) {
+    const confirmar = window.confirm(`Deseja cadastrar ${lead.nome} como pacinete?`);
+
+    if(!confirmar)
+      return;
+      
+    try{
+      const { error: errorInsert} = await supabase
+      .from('pacientes')
+      .insert([{
+        nome: lead.nome,
+        telefone: lead.telefone,
+
+      }]);
+
+      if(errorInsert) throw errorInsert;
+
+      const {error: errorDelete} = await supabase
+      .from('leads')
+      .delete()
+      .eq('id', lead.id);
+      
+      if(errorDelete) throw errorDelete;
+
+      alert('Paciente cadastrado com sucesso!');
+      buscarLeads();// atualiza a lista automaticamente     
+
+
+    } catch (error) {
+      console.error('Erro na conversão:', error);
+      alert('Erro ao converter paciente.');
+    }
+   }
+
   return (
     <div className="dashboard-page">
       <div className="dashboard-header">
@@ -61,6 +97,7 @@ export default function Dashboard() {
                   <th>Nome</th>
                   <th>Telefone/WhatsApp</th>
                   <th>Mensagem</th>
+                  <th>Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -71,6 +108,21 @@ export default function Dashboard() {
                     <td className="fw-bold">{lead.nome}</td>
                     <td>{lead.telefone}</td>
                     <td>{lead.mensagem}</td>
+                    <td>
+                      <button 
+                        onClick={() => converterLeadEmPaciente(lead)}
+                        style={{ 
+                          backgroundColor: 'var(--color-accent)', 
+                          color: 'white', 
+                          border: 'none', 
+                          padding: '8px 12px',
+                          borderRadius: '4px',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        Converter Paciente
+                      </button>
+                    </td>
                   </tr>
                 ))}
                 

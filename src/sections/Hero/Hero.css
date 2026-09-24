@@ -1,87 +1,147 @@
 .hero {
    background-color: var(--color-bg-secondary);
-   padding: var(--spacing-xxl) 0;
+   min-height: 80vh;
+   display: flex;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+
+.hero::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 50%;
+   height: 100%;
+   background-color: #F0EAE1; /* Slightly darker beige for a soft split background */
+   z-index: 1;
+   border-bottom-left-radius: 100px;
 }
 
 .hero-container {
    max-width: var(--max-width);
    margin: 0 auto;
    padding: 0 var(--spacing-md);
-
+   position: relative;
+   z-index: 2;
+   width: 100%;
    display: flex;
    align-items: center;
-   gap: var(--spacing-xl);
+   justify-content: space-between;
+   gap: var(--spacing-lg);
 }
 
 .hero-content {
    flex: 1;
+   max-width: 600px;
+   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.hero-content h1 {
-   font-size: 3rem;
+.hero-title {
+   font-size: 3.5rem;
    color: var(--color-text-primary);
-   margin-bottom: var(--spacing-sm);
+   margin-bottom: var(--spacing-md);
+   line-height: 1.1;
 }
 
-.hero-content p {
-   font-size: 1.125rem;
+.hero-credentials {
+   font-size: 0.95rem;
+   color: var(--color-accent);
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-bottom: var(--spacing-xs);
+}
+
+.hero-subtitle {
+   font-size: 1.25rem;
    color: var(--color-text-secondary);
    margin-bottom: var(--spacing-lg);
-   max-width: 90%;
+   line-height: 1.6;
+}
+
+.hero-image-container {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   height: 100%;
+   opacity: 0;
+   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+   animation-delay: 0.3s;
 }
 
 .hero-image {
-   flex: 1;
+   max-width: 100%;
+   max-height: 70vh;
+   object-fit: contain;
+   border-radius: var(--border-radius);
 }
 
-.image-placeholder {
-   width: 100%;
-   aspect-ratio: 4 / 5;
-   background-color: var(--color-border);
-   border-radius: var(--border-radius);
+@media (max-width: 768px) {
+   .hero {
+      min-height: 60vh;
+      padding-top: var(--spacing-xl);
+      padding-bottom: var(--spacing-xl);
+   }
+
+   .hero-container {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .hero::after {
+      display: none;
+   }
+
+   .hero-title {
+      font-size: 2.5rem;
+   }
+
+   .hero-content {
+      margin: 0 auto;
+   }
+   
+   .hero-image {
+      max-height: 40vh;
+   }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-social-proof {
    display: flex;
    align-items: center;
-   justify-content: center;
+   gap: var(--spacing-sm);
+   margin-top: var(--spacing-sm);
+   opacity: 0;
+   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+   animation-delay: 0.6s;
+}
+
+.hero-stars {
+   font-size: 0.95rem;
+   letter-spacing: 2px;
+}
+
+.hero-social-text {
+   font-size: 0.85rem;
    color: var(--color-text-secondary);
    font-weight: 500;
 }
 
-/*Mobile*/
 @media (max-width: 768px) {
-   .hero-container {
+   .hero-social-proof {
       flex-direction: column;
-      text-align: center;
-      gap: var(--spacing-lg);
+      gap: 4px;
    }
-
-   .her-content h1 {
-      font-size: 2.2rem;
-   }
-
-   .hero-image {
-      width: 100%;
-   }
-}
-
-/* 1. Criamos a "receita" da animação chamada fadeInUp */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px); /* Começa invisível e 30px mais para baixo */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Termina visível na posição original */
-  }
-}
-/* 2. Aplicamos a "receita" no conteúdo da Hero */
-.hero-content {
-  /* Nome da animação | Duração | Aceleração | Direção */
-  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-/* 3. Bônus: Fazemos a Imagem aparecer um pouquinho DEPOIS do texto (delay) */
-.hero-image {
-  opacity: 0; /* Esconde primeiro */
-  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-  animation-delay: 0.3s; /* Espera 0.3 segundos para começar */
 }

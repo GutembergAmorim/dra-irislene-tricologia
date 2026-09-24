@@ -1,4 +1,5 @@
 import './WhyChoose.css';
+import Button from "../../components/Button/Button";
 
 export default function WhyChoose() {
    return (
@@ -26,6 +27,10 @@ export default function WhyChoose() {
                   <p className="feature-descricao">Tratamentos comprovados cientificamente, sem falsas promessas. Focamos em resultados reais e duradouros.</p>
                </div>
 
+            </div>
+
+            <div className="why-choose-actions">
+               <Button texto="Agendar Minha Avaliação" href="#contato" />
             </div>
          </div>
       </section>

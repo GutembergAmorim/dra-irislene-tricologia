@@ -11,9 +11,9 @@ export default function Testimonials() {
             </div>
 
             <div className="testimonials-grid">
-               <TestimonialCard nome="Maria Silva" texto="Os tratamentos mudaram minha vida! Me sinto mais confiante." />
-               <TestimonialCard nome="João Santos" texto="Os tratamentos mudaram minha vida! Me sinto mais confiante." />
-               <TestimonialCard nome="Ana Oliveira" texto="Os tratamentos mudaram minha vida! Me sinto mais confiante." />
+               <TestimonialCard nome="Paciente A" texto="Eu já tinha tentado vários shampoos e vitaminas sem sucesso. A queda estava acabando com a minha autoestima. Depois de iniciar o protocolo correto aqui, meu cabelo finalmente parou de cair e os fios novos já estão visíveis. Mudou minha vida!" />
+               <TestimonialCard nome="Paciente B" texto="Tinha muito receio de fazer a Mesoterapia, mas o atendimento me passou tanta segurança que resolvi tentar. O procedimento é super tranquilo e, em poucas sessões, meu couro cabeludo é outro. Indico de olhos fechados!" />
+               <TestimonialCard nome="Paciente C" texto="A avaliação foi extremamente minuciosa. Entender a causa exata do meu problema me deu a tranquilidade que eu precisava. O tratamento de Luz Pulsada tem trazido resultados incríveis." />
             </div>
          </div>
       </section>

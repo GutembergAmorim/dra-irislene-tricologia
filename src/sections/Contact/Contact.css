@@ -1,25 +1,118 @@
 .contact {
    background-color: var(--color-bg-secondary);
-   padding: var(--spacing-section);
+   padding: var(--spacing-section) 0;
+}
+
+.contact-header {
+   text-align: center;
+   margin-bottom: var(--spacing-xl);
+   margin-top: var(--spacing-xl);
+}
+
+.contact-header h1 {
+   font-size: 2.2rem;
+   color: var(--color-text-primary);
+   margin-bottom: var(--spacing-sm);
+}
+
+.contact-header p {
+   font-size: 1.125rem;
+   color: var(--color-text-secondary);
+   margin-bottom: var(--spacing-md);
 }
 
 .contact-container {
    max-width: var(--max-width);
    margin: 0 auto;
    padding: var(--spacing-md);
+   display: flex;
+   gap: var(--spacing-xl);
+   align-items: flex-start;
 }
 
-.contact-container h2 {
-   font-size: 2rem;
+.contact-info-area {
+   flex: 1;
+}
+
+.section-headline {
+   font-size: 2.2rem;
    color: var(--color-text-primary);
    margin-bottom: var(--spacing-sm);
+}
+
+.contact-subheadline {
+   font-size: 1.125rem;
+   color: var(--color-text-secondary);
+   margin-bottom: var(--spacing-md);
+}
+
+.contact-details {
+   margin-bottom: var(--spacing-lg);
+   padding: var(--spacing-md);
+   background-color: var(--color-bg-primary);
+   border-radius: var(--border-radius);
+   border: 1px solid var(--color-border);
+}
+
+.contact-detail-item {
+   margin-bottom: var(--spacing-sm);
+   color: var(--color-text-primary);
+}
+
+.contact-detail-item:last-child {
+   margin-bottom: 0;
+}
+
+.contact-maps-area {
+   display: flex;
+   flex-direction: column;
+   gap: var(--spacing-md);
+}
+
+.maps-title {
+   color: var(--color-text-primary);
+   font-size: 1.5rem;
+   margin-bottom: var(--spacing-xs);
+}
+
+.map-item {
+   background-color: var(--color-bg-primary);
+   padding: var(--spacing-md);
+   border-radius: var(--border-radius);
+   border: 1px solid var(--color-border);
+}
+
+.map-subtitle {
+   color: var(--color-accent);
+   margin-bottom: var(--spacing-xs);
+   font-size: 1.125rem;
+}
+
+.map-address {
+   font-size: 0.95rem;
+   color: var(--color-text-secondary);
+}
+
+.contact-form-area {
+   flex: 1;
+   background-color: var(--color-bg-primary);
+   padding: var(--spacing-xl);
+   border-radius: var(--border-radius);
+   border: 1px solid var(--color-border);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-area h3 {
+   font-size: 1.8rem;
+   margin-bottom: var(--spacing-md);
+   color: var(--color-text-primary);
    text-align: center;
 }
 
-.contact-container p {
+.contact-form p {
    color: var(--color-text-secondary);
-   margin-bottom: var(--spacing-xl);
-   text-align: center;
+   margin-bottom: var(--spacing-md);
+   font-size: 1rem;
 }
 
 .contact-form {
@@ -31,31 +124,50 @@
 .contact-form label {
    color: var(--color-text-primary);
    font-weight: 500;
-   margin-bottom: -8px; /* Puxa um pouquinho para perto do input */
+   margin-bottom: -8px;
    font-size: 0.95rem;
 }
-/* Estilizando os campos de texto */
+
 .contact-form input,
 .contact-form textarea {
    width: 100%;
    padding: 12px 16px;
    border: 1px solid var(--color-border);
    border-radius: var(--border-radius);
-   background-color: var(--color-bg-primary); /* Fundo branco no input */
-   font-family: var(--font-body); /* Força a fonte correta */
+   background-color: var(--color-bg-secondary);
+   font-family: var(--font-body);
    font-size: 1rem;
    color: var(--color-text-primary);
    transition: var(--transition-default);
 }
-/* Deixa a textarea maiorzinha */
+
 .contact-form textarea {
    min-height: 120px;
-   resize: vertical; /* Permite redimensionar só pra baixo */
+   resize: vertical;
 }
-/* O efeito quando o usuário clica para digitar (Focus) */
+
 .contact-form input:focus,
 .contact-form textarea:focus {
    outline: none;
-   border-color: var(--color-accent); /* Borda fica dourada */
-   box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2); /* Brilho dourado ao redor */
+   border-color: var(--color-accent);
+   box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2);
+}
+
+.success-message {
+   color: #2e7d32;
+   font-weight: 600;
+   background-color: #e8f5e9;
+   padding: 10px;
+   border-radius: var(--border-radius);
+   text-align: center;
+}
+
+@media (max-width: 900px) {
+   .contact-container {
+      flex-direction: column;
+   }
+   
+   .contact-info-area, .contact-form-area {
+      width: 100%;
+   }
 }

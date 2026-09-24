@@ -22,7 +22,7 @@
 
 .specialties-grid {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(3, 1fr);
    gap: var(--spacing-md);
 }
 
@@ -30,4 +30,8 @@
    .specialties-grid {
       grid-template-columns: repeat(2, 1fr);
    }
+}
+.specialties-actions {
+   margin-top: var(--spacing-xl);
+   text-align: center;
 }

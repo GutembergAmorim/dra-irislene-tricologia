@@ -3,10 +3,13 @@ import Hero from "../sections/Hero/Hero"
 import Specialties from "../sections/Specialties/Specialties"
 import WhyChoose from "../sections/WhyChoose/WhyChoose"
 import About from "../sections/About/About"
-import BeforeAfter from "../sections/BeforeAfter/BeforeAfter"
+// import BeforeAfter from "../sections/BeforeAfter/BeforeAfter"
 import Testimonials from "../sections/Testimonials/Testimonials"
+import FAQ from "../sections/FAQ/FAQ"
 import Contact from "../sections/Contact/Contact"
 import Footer from "../sections/Footer/Footer"
+import FloatingWhatsApp from "../components/FloatingWhatsApp/FloatingWhatsApp"
+
 export default function Home() {
     return (
         <>
@@ -16,11 +19,13 @@ export default function Home() {
                 <Specialties/>
                 <WhyChoose/>
                 <About/>
-                <BeforeAfter/>
+                {/* <BeforeAfter/> */}
                 <Testimonials/>
+                <FAQ/>
                 <Contact/>
             </main>
             <Footer/>
+            <FloatingWhatsApp/>
         </>
     )
 }

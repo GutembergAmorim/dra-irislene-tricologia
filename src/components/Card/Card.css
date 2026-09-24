@@ -22,3 +22,8 @@
    color: var(--color-text-secondary);
    font-size: 0.9rem;
 }
+
+.card-icon {
+   font-size: 2.5rem;
+   margin-bottom: var(--spacing-sm);
+}
