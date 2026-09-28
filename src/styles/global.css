@@ -27,8 +27,8 @@ img, video, iframe {
   --color-bg-secondary: #F8F6F3;      /* fundo alternado de seções (cinza claro) */
   --color-text-primary: #2D2D2D;      /* texto principal (cinza escuro, NÃO preto puro) */
   --color-text-secondary: #6B7280;    /* texto secundário (cinza médio) */
-  --color-accent: #C9A96E;            /* destaque dourado sutil */
-  --color-accent-hover: #B08D4F;      /* dourado um tom mais escuro pro hover */
+  --color-accent: #B0B5B9;            /* destaque dourado sutil */
+  --color-accent-hover: #8D9399;      /* dourado um tom mais escuro pro hover */
   --color-white: #FFFFFF;
   --color-border: #E5E7EB;            /* cor de bordas sutis */
 

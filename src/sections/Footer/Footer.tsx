@@ -2,6 +2,7 @@
 import './Footer.css';
 // 1. Importando os ícones da biblioteca que acabamos de instalar
 import {  MessageCircle } from 'lucide-react';
+import logoMonogram from '../../assets/logo-monogram.png';
 
 export default function Footer() {
     return (
@@ -9,7 +10,7 @@ export default function Footer() {
             <div className="footer-container">
                 
                 <div className="footer-logo-placeholder">
-                    <span>[Logo Dra. Irislene]</span>
+                    <img src={logoMonogram} alt="IB" style={{ maxHeight: '40px' }} />
                 </div>
                 
                 <div className="footer-info">
