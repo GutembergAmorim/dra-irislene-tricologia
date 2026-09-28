@@ -15,10 +15,6 @@
 /* Renomeado para evitar colisão com o Hero */
 .footer-logo-placeholder {
    border-radius: var(--border-radius);
-   background-color: var(--color-text-secondary);
-   color: var(--color-bg-primary);
-   font-weight: 600;
-   padding: 8px 14px;
 }
 .logo-monogram {
    font-size: 2rem;

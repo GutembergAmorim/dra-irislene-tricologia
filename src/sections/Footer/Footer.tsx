@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="footer-container">
                 
                 <div className="footer-logo-placeholder">
-                    <img src={logoMonogram} alt="IB" style={{ maxHeight: '40px' }} />
+                    <img src={logoMonogram} alt="IB" style={{ maxHeight: '100px' }} />
                 </div>
                 
                 <div className="footer-info">
